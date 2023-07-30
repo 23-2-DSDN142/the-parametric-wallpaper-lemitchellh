@@ -4,6 +4,18 @@ let strokelight = 3;
 
 let lightdest = 100;
 
+let red = "rgb(255, 0, 0)";
+let orange = "rgb(250, 100, 50)";
+let yellow = "rgb(255, 255, 0)";
+let green = "rgb(0, 250, 0)";
+let blue = "rgb(0, 0, 250)";
+let pink = "rgb(250, 0 , 250)";
+let purple = "rgb(150, 0, 150)";
+
+let triangleblue = "rgb(232, 244, 248)";
+
+let white = "rbg(255, 255, 255)";
+
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
@@ -22,7 +34,7 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   strokeWeight (strokelight);
 
-  stroke (255); 
+  stroke (white); 
 
 
 
@@ -46,27 +58,27 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 strokeWeight (strokelight + 2)
 
-  stroke (255, 0, 0) //red
+  stroke (red) //red
 line (lightdest, lightdest, 200, 1); // red
 
-stroke ( 250, 100, 50); // orange
+stroke (orange); // orange
 line (lightdest, lightdest, 200, 34); //orange
 
-stroke (255, 255, 0); //yellow
+stroke (yellow); //yellow
 line (lightdest, lightdest, 200, 67); //yellow
 
-stroke(0, 250, 0); //green
+stroke(green); //green
 line (lightdest, lightdest, 200, 100); //green
-stroke (0, 0, 250); // bluee
+stroke (blue); // bluee
 line (lightdest, lightdest, 200, 133); //blue
-stroke (250, 0, 250); //pink
+stroke (pink); //pink
 line (lightdest, lightdest, 200, 166); //pinkk
-stroke (150, 0, 150); //purple
+stroke (purple); //purple
 line (lightdest, lightdest, 200, 200); //purple
-  stroke(232,244,248);
   
-
- strokeWeight (strokelight + 2)
+stroke(triangleblue);
+  
+strokeWeight (strokelight + 2)
   fill(0);
   triangle (50, 150, 100, 50, 150, 150); //center triangle
   //triangle (100, 50, 100, 1, 1, 50);
