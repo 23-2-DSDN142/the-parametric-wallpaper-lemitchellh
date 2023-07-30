@@ -1,7 +1,8 @@
 //your parameter variables go here!
 
-rayx (120);
-rayy (110);
+let strokelight = 3;
+
+let lightdest = 100;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -19,56 +20,58 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  strokeWeight (4);
+  strokeWeight (strokelight);
 
   stroke (255); 
 
 
 
-  line (100,0,100, 200); //top down
+  //line (100, 5, 100, 200); //top down
   //line (130, 0, 30, 200); //top right to left
   //line (70, 0, 170, 200);
-  line (0, 150, 200, 150);
-  line (0, 50, 200, 50);
-  line (100, 0, 0, 50);
-  line (100, 0, 200, 50);
-  line (100, 200, 0, 150);
-  line (100, 200, 200, 150);
+  //line (0, 150, 200, 150);
+  //line (0, 50, 200, 50);
+  //line (100, 0, 0, 50);
+  //line (100, 0, 200, 50);
+  //line (100, 200, 0, 150);
+  //line (100, 200, 200, 150);
   
-  line (1, 1, 100, 100);
-  line (1, 34, 100, 100);
-  line (1, 67, 100, 100);
-  line (1, 100, 100, 100);
-  line (1, 133, 100, 100);
-  line (1, 166, 100, 100);
-  line (1, 200, 100, 100);
+  line (1, 1, lightdest, lightdest); // line 1
+  line (1, 34, lightdest, lightdest); // line 2
+  line (1, 67, lightdest, lightdest); // line 3
+  line (1, 100, lightdest, lightdest); // line 4
+  line (1, 133, lightdest, lightdest); // line 5
+  line (1, 166, lightdest, lightdest); // line 6
+  line (1, 200, lightdest, lightdest); // line 7
 
-  stroke (255, 0, 0)
-line (100, 100, 200, 1);
+strokeWeight (strokelight + 2)
 
-stroke ( 250, 100, 50);
-line (100, 100, 200, 34);
+  stroke (255, 0, 0) //red
+line (lightdest, lightdest, 200, 1); // red
 
-stroke (255, 255, 0);
-line (100, 100, 200, 67);
+stroke ( 250, 100, 50); // orange
+line (lightdest, lightdest, 200, 34); //orange
 
-stroke(0, 250, 0);
-line (120, 100, 200, 100);
-stroke (0, 0, 250);
-line (100, 100, 200, 133);
-stroke (250, 0, 250);
-line (100, 100, 200, 166);
-stroke (150, 0, 150);
-line (100, 100, 200, 200);
+stroke (255, 255, 0); //yellow
+line (lightdest, lightdest, 200, 67); //yellow
+
+stroke(0, 250, 0); //green
+line (lightdest, lightdest, 200, 100); //green
+stroke (0, 0, 250); // bluee
+line (lightdest, lightdest, 200, 133); //blue
+stroke (250, 0, 250); //pink
+line (lightdest, lightdest, 200, 166); //pinkk
+stroke (150, 0, 150); //purple
+line (lightdest, lightdest, 200, 200); //purple
   stroke(232,244,248);
   
 
-
+ strokeWeight (strokelight + 2)
   fill(0);
-  triangle (50, 150, 100, 50, 150, 150);
-  triangle (100, 50, 100, 1, 1, 50);
- triangle (100, 50, 200, 50, 100, 1);
- triangle (100, 200, 1, 150, 200, 150);
-  line (100, 1, 100, 200); 
+  triangle (50, 150, 100, 50, 150, 150); //center triangle
+  //triangle (100, 50, 100, 1, 1, 50);
+ triangle (1, 50, 200, 50, 100, 1); //top triangle
+ triangle (100, 200, 1, 150, 200, 150); //bottom triangle
+  line (100, 1, 100, 200); //line straight down middle
 }
 
