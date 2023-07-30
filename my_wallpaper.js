@@ -17,7 +17,7 @@ let triangleblue = "rgb(232, 244, 248)";
 let white = "rbg(255, 255, 255)";
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
@@ -34,10 +34,19 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
   strokeWeight (strokelight);
 
-  stroke (white); 
+  stroke (white);
+  fill(0); 
+  rect (0, 0, 200, 200);
 
 
+  triangle (1, 50, 200, 50, 100, 1); //top triangle  
+ triangle (100, 200, 1, 150, 200, 150); //bottom triangle
+ triangle (100, 1, 100, 200, 1, 100);
+ 
+  triangle ( 100, 1, 100, 200, 200, 100); 
 
+
+strokeWeight(strokelight);
   //line (100, 5, 100, 200); //top down
   //line (130, 0, 30, 200); //top right to left
   //line (70, 0, 170, 200);
@@ -82,8 +91,6 @@ strokeWeight (strokelight + 2)
   fill(0);
   triangle (50, 150, 100, 50, 150, 150); //center triangle
   //triangle (100, 50, 100, 1, 1, 50);
- triangle (1, 50, 200, 50, 100, 1); //top triangle
- triangle (100, 200, 1, 150, 200, 150); //bottom triangle
-  line (100, 1, 100, 200); //line straight down middle
+  //line (100, 1, 100, 200); //line straight down middle
 }
 
