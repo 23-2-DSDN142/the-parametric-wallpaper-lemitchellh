@@ -47,15 +47,15 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 
 strokeWeight(strokelight);
-  //line (100, 5, 100, 200); //top down
-  //line (130, 0, 30, 200); //top right to left
-  //line (70, 0, 170, 200);
-  //line (0, 150, 200, 150);
-  //line (0, 50, 200, 50);
-  //line (100, 0, 0, 50);
-  //line (100, 0, 200, 50);
-  //line (100, 200, 0, 150);
-  //line (100, 200, 200, 150);
+  line (100, 5, 100, 200); //top down
+  line (130, 0, 30, 200); //top right to left
+  line (70, 0, 170, 200);
+  line (0, 150, 200, 150);
+  line (0, 50, 200, 50);
+  line (100, 0, 0, 50);
+  line (100, 0, 200, 50);
+  line (100, 200, 0, 150);
+  line (100, 200, 200, 150);
   
   line (1, 1, lightdest, lightdest); // line 1
   line (1, 34, lightdest, lightdest); // line 2
@@ -65,6 +65,8 @@ strokeWeight(strokelight);
   line (1, 166, lightdest, lightdest); // line 6
   line (1, 200, lightdest, lightdest); // line 7
 
+
+  
 strokeWeight (strokelight + 2)
 
   stroke (red) //red
