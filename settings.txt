@@ -1,21 +1,45 @@
-You will need to fill out this file for hand in. 
-The bellow is just an example, feel free to disregard this documents contents.
-
-
-Your final settings.txt will look something like this when you are finished:
 
 /////////////////////////////////
 
 Wallpaper 1:
 
 //your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+let strokelight = 1.75; //controls strokeweight of white lines in general
+let strokecolour = strokelight + 1.25; // controls strokeweight of coloured lines
+let strokewhite = 1.75; // controls strokeweight of white lights coming in
+let stroketriangle = strokelight + 2; //controls strokeweight of main triangle
+
+
+let lightdestx = 100; // where the light is heading, and coloured ones starting from
+let lightdesty = lightdestx;
+
+let red = "rgb(255, 0, 0)"; // different colours
+let orange = "rgb(250, 100, 50)";
+let yellow = "rgb(255, 255, 0)";
+let green = "rgb(0, 250, 0)";
+let blue = "rgb(0, 0, 250)";
+let pink = "rgb(250, 0 , 250)";
+let purple = "rgb(150, 0, 150)";
+let triangleblue = "rgb(232, 244, 248)";
+let white = "rbg(255, 255, 255)";
+
+let fillb = 0; // fill of border square and main triangle 
+
+let cellW = 200; // controls cell width
+let cellH = 200; // controls cell height 
+
+if (lightdesty < 100) {
+  strokecolour = 0;
+  strokewhite = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the left, the coloured lines are cancelled and white lines embiggened
+
+if (lightdesty > 100) {
+  strokewhite = 0;
+  strokecolour = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the right, the white lines are cancelled and coloured lines embiggened
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -23,9 +47,9 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = cellW;
+  pWallpaper.grid_settings.cell_height = cellH;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
 
 /////////////////////////////////
@@ -33,13 +57,43 @@ function setup_wallpaper(pWallpaper) {
 Wallpaper 2:
 
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let strokelight = 1.75; //controls strokeweight of white lines in general
+let strokecolour = strokelight + 1.25; // controls strokeweight of coloured lines
+let strokewhite = 1.75; // controls strokeweight of white lights coming in
+let stroketriangle = strokelight + 2; //controls strokeweight of main triangle
+
+
+let lightdestx = 100; // where the light is heading, and coloured ones starting from
+let lightdesty = lightdestx;
+
+let red = "rgb(255, 0, 0)"; // different colours
+let orange = "rgb(250, 100, 50)";
+let yellow = "rgb(255, 255, 0)";
+let green = "rgb(0, 250, 0)";
+let blue = "rgb(0, 0, 250)";
+let pink = "rgb(250, 0 , 250)";
+let purple = "rgb(150, 0, 150)";
+let triangleblue = "rgb(232, 244, 248)";
+let white = "rbg(255, 255, 255)";
+let black = 1;
+
+let fillb = 255; // fill of border square and main triangle 
+
+let cellW = 200; // controls cell width
+let cellH = 200; // controls cell height 
+
+if (lightdesty < 100) {
+  strokecolour = 0;
+  strokewhite = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the left, the coloured lines are cancelled and white lines embiggened
+
+if (lightdesty > 100) {
+  strokewhite = 0;
+  strokecolour = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the right, the white lines are cancelled and coloured lines embiggened
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -47,7 +101,368 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.cell_width  = cellW;
+  pWallpaper.grid_settings.cell_height = cellH;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+
+Wallpaper 3:
+
+let strokelight = 1.75; //controls strokeweight of white lines in general
+let strokecolour = strokelight + 1.25; // controls strokeweight of coloured lines
+let strokewhite = 1.75; // controls strokeweight of white lights coming in
+let stroketriangle = strokelight + 2; //controls strokeweight of main triangle
+
+
+let lightdestx = 50; // where the light is heading, and coloured ones starting from
+let lightdesty = lightdestx;
+
+let red = "rgb(255, 0, 0)"; // different colours
+let orange = "rgb(250, 100, 50)";
+let yellow = "rgb(255, 255, 0)";
+let green = "rgb(0, 250, 0)";
+let blue = "rgb(0, 0, 250)";
+let pink = "rgb(250, 0 , 250)";
+let purple = "rgb(150, 0, 150)";
+let triangleblue = "rgb(232, 244, 248)";
+let white = "rbg(255, 255, 255)";
+let black = 1;
+
+let fillb = 0; // fill of border square and main triangle 
+
+let cellW = 100; // controls cell width
+let cellH = 50; // controls cell height 
+
+if (lightdesty < 100) {
+  strokecolour = 0;
+  strokewhite = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the left, the coloured lines are cancelled and white lines embiggened
+
+if (lightdesty > 100) {
+  strokewhite = 0;
+  strokecolour = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the right, the white lines are cancelled and coloured lines embiggened
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellW;
+  pWallpaper.grid_settings.cell_height = cellH;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+Wallpaper 4:
+
+let strokelight = 1.75; //controls strokeweight of white lines in general
+let strokecolour = strokelight + 1.25; // controls strokeweight of coloured lines
+let strokewhite = 1.75; // controls strokeweight of white lights coming in
+let stroketriangle = strokelight + 2; //controls strokeweight of main triangle
+
+
+let lightdestx = 101; // where the light is heading, and coloured ones starting from
+let lightdesty = lightdestx;
+
+let red = "rgb(255, 0, 0)"; // different colours
+let orange = "rgb(250, 100, 50)";
+let yellow = "rgb(255, 255, 0)";
+let green = "rgb(0, 250, 0)";
+let blue = "rgb(0, 0, 250)";
+let pink = "rgb(250, 0 , 250)";
+let purple = "rgb(150, 0, 150)";
+let triangleblue = "rgb(232, 244, 248)";
+let white = "rbg(255, 255, 255)";
+let black = 1;
+
+let fillb = 0; // fill of border square and main triangle 
+
+let cellW = 200; // controls cell width
+let cellH = 200; // controls cell height 
+
+if (lightdesty < 100) {
+  strokecolour = 0;
+  strokewhite = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the left, the coloured lines are cancelled and white lines embiggened
+
+if (lightdesty > 100) {
+  strokewhite = 0;
+  strokecolour = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the right, the white lines are cancelled and coloured lines embiggened
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellW;
+  pWallpaper.grid_settings.cell_height = cellH;
   pWallpaper.grid_settings.row_offset  = 0;
 }
+
+Wallpaper 5:
+let strokelight = 10.75; //controls strokeweight of white lines in general
+let strokecolour = strokelight + 1.25; // controls strokeweight of coloured lines
+let strokewhite = 8.75; // controls strokeweight of white lights coming in
+let stroketriangle = strokelight + 5; //controls strokeweight of main triangle
+
+
+let lightdestx = 100; // where the light is heading, and coloured ones starting from
+let lightdesty = lightdestx;
+
+let red = "rgb(255, 0, 0)"; // different colours
+let orange = "rgb(250, 100, 50)";
+let yellow = "rgb(255, 255, 0)";
+let green = "rgb(0, 250, 0)";
+let blue = "rgb(0, 0, 250)";
+let pink = "rgb(250, 0 , 250)";
+let purple = "rgb(150, 0, 150)";
+let triangleblue = "rgb(232, 244, 248)";
+let white = "rbg(255, 255, 255)";
+let black = 1;
+
+let fillb = 100; // fill of border square and main triangle 
+
+let cellW = 200; // controls cell width
+let cellH = 200; // controls cell height 
+
+if (lightdesty < 100) {
+  strokecolour = 0;
+  strokewhite = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the left, the coloured lines are cancelled and white lines embiggened
+
+if (lightdesty > 100) {
+  strokewhite = 0;
+  strokecolour = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the right, the white lines are cancelled and coloured lines embiggened
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellW;
+  pWallpaper.grid_settings.cell_height = cellH;
+  pWallpaper.grid_settings.row_offset  = 200;
+}
+
+Wallpaper 6:
+let strokelight = 32.75; //controls strokeweight of white lines in general
+let strokecolour = strokelight + 1.25; // controls strokeweight of coloured lines
+let strokewhite = 2.75; // controls strokeweight of white lights coming in
+let stroketriangle = strokelight + 5; //controls strokeweight of main triangle
+
+
+let lightdestx = 100; // where the light is heading, and coloured ones starting from
+let lightdesty = lightdestx;
+
+let red = "rgb(255, 0, 0)"; // different colours
+let orange = "rgb(250, 100, 50)";
+let yellow = "rgb(255, 255, 0)";
+let green = "rgb(0, 250, 0)";
+let blue = "rgb(0, 0, 250)";
+let pink = "rgb(250, 0 , 250)";
+let purple = "rgb(150, 0, 150)";
+let triangleblue = "rgb(232, 244, 248)";
+let white = "rbg(255, 255, 255)";
+let black = 1;
+
+let fillb = 0; // fill of border square and main triangle 
+
+let cellW = 250; // controls cell width
+let cellH = 250; // controls cell height 
+
+if (lightdesty < 100) {
+  strokecolour = 0;
+  strokewhite = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the left, the coloured lines are cancelled and white lines embiggened
+
+if (lightdesty > 100) {
+  strokewhite = 0;
+  strokecolour = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the right, the white lines are cancelled and coloured lines embiggened
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellW;
+  pWallpaper.grid_settings.cell_height = cellH;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+Wallpaper 7:
+
+
+let strokelight = 2.75; //controls strokeweight of white lines in general
+let strokecolour = strokelight + 1.25; // controls strokeweight of coloured lines
+let strokewhite = 2.75; // controls strokeweight of white lights coming in
+let stroketriangle = strokelight + 5; //controls strokeweight of main triangle
+
+
+let lightdestx = 99; // where the light is heading, and coloured ones starting from
+let lightdesty = lightdestx;
+
+let red = "rgb(255, 0, 0)"; // different colours
+let orange = "rgb(250, 100, 50)";
+let yellow = "rgb(255, 255, 0)";
+let green = "rgb(0, 250, 0)";
+let blue = "rgb(0, 0, 250)";
+let pink = "rgb(250, 0 , 250)";
+let purple = "rgb(150, 0, 150)";
+let triangleblue = "rgb(232, 244, 248)";
+let white = "rbg(255, 255, 255)";
+let black = 1;
+
+let fillb = 0; // fill of border square and main triangle 
+
+let cellW = 50; // controls cell width
+let cellH = 20; // controls cell height 
+
+if (lightdesty < 100) {
+  strokecolour = 0;
+  strokewhite = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the left, the coloured lines are cancelled and white lines embiggened
+
+if (lightdesty > 100) {
+  strokewhite = 0;
+  strokecolour = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the right, the white lines are cancelled and coloured lines embiggened
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellW;
+  pWallpaper.grid_settings.cell_height = cellH;
+  pWallpaper.grid_settings.row_offset  = 20;
+}
+
+Wallpaper 8
+
+let strokelight = 2.75; //controls strokeweight of white lines in general
+let strokecolour = strokelight + 1.25; // controls strokeweight of coloured lines
+let strokewhite = 2.75; // controls strokeweight of white lights coming in
+let stroketriangle = strokelight + 5; //controls strokeweight of main triangle
+
+
+let lightdestx = 101; // where the light is heading, and coloured ones starting from
+let lightdesty = lightdestx;
+
+let red = "rgb(255, 0, 0)"; // different colours
+let orange = "rgb(250, 100, 50)";
+let yellow = "rgb(255, 255, 0)";
+let green = "rgb(0, 250, 0)";
+let blue = "rgb(0, 0, 250)";
+let pink = "rgb(250, 0 , 250)";
+let purple = "rgb(150, 0, 150)";
+let triangleblue = "rgb(232, 244, 248)";
+let white = "rbg(255, 255, 255)";
+let black = 1;
+
+let fillb = 0; // fill of border square and main triangle 
+
+let cellW = 30; // controls cell width
+let cellH = 20; // controls cell height 
+
+if (lightdesty < 100) {
+  strokecolour = 0;
+  strokewhite = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the left, the coloured lines are cancelled and white lines embiggened
+
+if (lightdesty > 100) {
+  strokewhite = 0;
+  strokecolour = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the right, the white lines are cancelled and coloured lines embiggened
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellW;
+  pWallpaper.grid_settings.cell_height = cellH;
+  pWallpaper.grid_settings.row_offset  = 20;
+}
+
+Wallpaper 9:
+
+let strokelight = 12.75; //controls strokeweight of white lines in general
+let strokecolour = strokelight + 1.25; // controls strokeweight of coloured lines
+let strokewhite = 12.75; // controls strokeweight of white lights coming in
+let stroketriangle = strokelight + 5; //controls strokeweight of main triangle
+
+
+let lightdestx = 1; // where the light is heading, and coloured ones starting from
+let lightdesty = lightdestx;
+
+let red = "rgb(255, 0, 0)"; // different colours
+let orange = "rgb(250, 100, 50)";
+let yellow = "rgb(255, 255, 0)";
+let green = "rgb(0, 250, 0)";
+let blue = "rgb(0, 0, 250)";
+let pink = "rgb(250, 0 , 250)";
+let purple = "rgb(150, 0, 150)";
+let triangleblue = "rgb(232, 244, 248)";
+let white = "rbg(255, 255, 255)";
+let black = 1;
+
+let fillb = 0; // fill of border square and main triangle 
+
+let cellW = 100; // controls cell width
+let cellH = 100; // controls cell height 
+
+if (lightdesty < 100) {
+  strokecolour = 0;
+  strokewhite = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the left, the coloured lines are cancelled and white lines embiggened
+
+if (lightdesty > 100) {
+  strokewhite = 0;
+  strokecolour = 10;
+  strokelight = 4
+} // if the light destination is moved closer to the right, the white lines are cancelled and coloured lines embiggened
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellW;
+  pWallpaper.grid_settings.cell_height = cellH;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+
+
+

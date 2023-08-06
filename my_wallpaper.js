@@ -1,15 +1,15 @@
 //your parameter variables go here!
 
-let strokelight = 1.75;
-let strokecolour = strokelight + 1.25;
-let strokewhite = 1.75;
-let stroketriangle = strokelight + 2;
+let strokelight = 2.75; //controls strokeweight of white lines in general
+let strokecolour = strokelight + 1.25; // controls strokeweight of coloured lines
+let strokewhite = 2.75; // controls strokeweight of white lights coming in
+let stroketriangle = strokelight + 5; //controls strokeweight of main triangle
 
 
-let lightdestx = 100;
+let lightdestx = 100; // where the light is heading, and coloured ones starting from
 let lightdesty = lightdestx;
 
-let red = "rgb(255, 0, 0)";
+let red = "rgb(255, 0, 0)"; // different colours
 let orange = "rgb(250, 100, 50)";
 let yellow = "rgb(255, 255, 0)";
 let green = "rgb(0, 250, 0)";
@@ -18,51 +18,35 @@ let pink = "rgb(250, 0 , 250)";
 let purple = "rgb(150, 0, 150)";
 let triangleblue = "rgb(232, 244, 248)";
 let white = "rbg(255, 255, 255)";
+let black = 1;
 
-let toptrix1 = 1;
-let toptrix2 = 200;
-let toptrix3 = 100;
-let toptriy1 = 50;
-let toptriy2 = 1;
+let fillb = 0; // fill of border square and main triangle 
 
-let bottrix1 = 100; 
-let bottrix2 = 1; 
-let bottrix3 = 200;
-let bottriy1 = 200;
-let bottriy2 = 150;
-
-let fillb = 0;
-
-let cellW = 200;
-let cellH = 200;
-
-
+let cellW = 200; // controls cell width
+let cellH = 200; // controls cell height 
 
 if (lightdesty < 100) {
   strokecolour = 0;
   strokewhite = 10;
   strokelight = 4
-}
+} // if the light destination is moved closer to the left, the coloured lines are cancelled and white lines embiggened
 
 if (lightdesty > 100) {
   strokewhite = 0;
   strokecolour = 10;
   strokelight = 4
-}
+} // if the light destination is moved closer to the right, the white lines are cancelled and coloured lines embiggened
 
-
-
- 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = cellW;
   pWallpaper.grid_settings.cell_height = cellH;
-  pWallpaper.grid_settings.row_offset  = 100;
+  pWallpaper.grid_settings.row_offset  = 200;
 }
 
 function wallpaper_background() {
@@ -77,8 +61,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   rect (0, 0, 200, 200);
 
   strokeWeight(4);
-  //triangle (toptrix1, meetmiddle - 2, toptrix2, meetmiddle - 2, toptrix3, toptriy2); //top triangle  
- //triangle (bottrix1, bottriy1, bottrix2, meetmiddle + 2, bottrix3, meetmiddle + 2); //bottom triangle
  strokeWeight (strokelight);
  triangle (100, 1, 100, 200, 1, 100); //left triangle
  
@@ -125,7 +107,7 @@ line (lightdestx, lightdesty, 200, 166); //pinkk
 stroke (purple); //purple
 line (lightdestx, lightdesty, 200, 200); //purple
   
-stroke(triangleblue);
+stroke(white);
   
 strokeWeight (stroketriangle);
   fill(fillb);
@@ -133,9 +115,5 @@ strokeWeight (stroketriangle);
   //triangle (100, 50, 100, 1, 1, 50);
   //line (100, 1, 100, 200); //line straight down middle
 
-  //strokeWeight(finaltriangle);
-  //fill (transparent);
-  //triangle (toptrix1, 100, toptrix2, 100, toptrix3, toptriy2); //top triangle  
- //triangle (bottrix1, bottriy1, bottrix2, 100, bottrix3, 100); //bottom triangle
-}
+  }
 
