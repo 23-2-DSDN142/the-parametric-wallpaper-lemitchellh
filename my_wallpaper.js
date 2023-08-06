@@ -1,9 +1,9 @@
 //your parameter variables go here!
 
-let strokelight = 2.75; //controls strokeweight of white lines in general
+let strokelight = 1.75; //controls strokeweight of white lines in general
 let strokecolour = strokelight + 1.25; // controls strokeweight of coloured lines
-let strokewhite = 2.75; // controls strokeweight of white lights coming in
-let stroketriangle = strokelight + 5; //controls strokeweight of main triangle
+let strokewhite = 1.75; // controls strokeweight of white lights coming in
+let stroketriangle = strokelight + 2; //controls strokeweight of main triangle
 
 
 let lightdestx = 100; // where the light is heading, and coloured ones starting from
@@ -18,7 +18,7 @@ let pink = "rgb(250, 0 , 250)";
 let purple = "rgb(150, 0, 150)";
 let triangleblue = "rgb(232, 244, 248)";
 let white = "rbg(255, 255, 255)";
-let black = 1;
+let black = 1
 
 let fillb = 0; // fill of border square and main triangle 
 
@@ -40,13 +40,13 @@ if (lightdesty > 100) {
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = cellW;
   pWallpaper.grid_settings.cell_height = cellH;
-  pWallpaper.grid_settings.row_offset  = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
 
 function wallpaper_background() {
