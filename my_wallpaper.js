@@ -1,13 +1,13 @@
 //your parameter variables go here!
 
-let strokelight = 2.75;
+let strokelight = 1.75;
 let strokecolour = strokelight + 1.25;
-let strokewhite = 2.75;
-let stroketriangle = 3.75;
-let finaltriangle = 0;
+let strokewhite = 1.75;
+let stroketriangle = strokelight + 2;
+
 
 let lightdestx = 100;
-let lightdesty = 100;
+let lightdesty = lightdestx;
 
 let red = "rgb(255, 0, 0)";
 let orange = "rgb(250, 100, 50)";
@@ -31,14 +31,23 @@ let bottrix3 = 200;
 let bottriy1 = 200;
 let bottriy2 = 150;
 
-let meetmiddle = 90;
+let fillb = 0;
 
-if (meetmiddle == 100) {
-  strokewhite = 0;
+let cellW = 200;
+let cellH = 200;
+
+
+
+if (lightdesty < 100) {
   strokecolour = 0;
-  stroketriangle = 0;
-  finaltriangle = 2.75;
-  fill (0); 
+  strokewhite = 10;
+  strokelight = 4
+}
+
+if (lightdesty > 100) {
+  strokewhite = 0;
+  strokecolour = 10;
+  strokelight = 4
 }
 
 
@@ -51,8 +60,8 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.cell_width  = cellW;
+  pWallpaper.grid_settings.cell_height = cellH;
   pWallpaper.grid_settings.row_offset  = 100;
 }
 
@@ -64,19 +73,19 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   strokeWeight (strokelight);
 
   stroke (white);
-  fill(0); 
+  fill(fillb); 
   rect (0, 0, 200, 200);
 
   strokeWeight(4);
   //triangle (toptrix1, meetmiddle - 2, toptrix2, meetmiddle - 2, toptrix3, toptriy2); //top triangle  
  //triangle (bottrix1, bottriy1, bottrix2, meetmiddle + 2, bottrix3, meetmiddle + 2); //bottom triangle
- strokeWeight (strokewhite);
+ strokeWeight (strokelight);
  triangle (100, 1, 100, 200, 1, 100); //left triangle
  
   triangle ( 100, 1, 100, 200, 200, 100); //righttriangle
 
 
-strokeWeight(strokewhite);
+strokeWeight(strokelight);
   //line (100, 5, 100, 200); //top down
   //line (130, 0, 30, 200); //top right to left
   //line (70, 0, 170, 200);
@@ -119,14 +128,14 @@ line (lightdestx, lightdesty, 200, 200); //purple
 stroke(triangleblue);
   
 strokeWeight (stroketriangle);
-  fill(0);
-  triangle (lightdestx - 50, lightdesty + 50, lightdestx, lightdesty - 50, lightdestx + 50, lightdesty + 50); //center triangle
+  fill(fillb);
+  triangle (lightdestx / 2, lightdesty * 1.5, lightdestx, lightdesty / 2, lightdestx * 1.5, lightdesty * 1.5); //center triangle
   //triangle (100, 50, 100, 1, 1, 50);
-  line (100, 1, 100, 200); //line straight down middle
+  //line (100, 1, 100, 200); //line straight down middle
 
-  strokeWeight(finaltriangle);
-  fill (transparent);
-  triangle (toptrix1, meetmiddle - 2, toptrix2, meetmiddle - 2, toptrix3, toptriy2); //top triangle  
- triangle (bottrix1, bottriy1, bottrix2, meetmiddle + 2, bottrix3, meetmiddle + 2); //bottom triangle
+  //strokeWeight(finaltriangle);
+  //fill (transparent);
+  //triangle (toptrix1, 100, toptrix2, 100, toptrix3, toptriy2); //top triangle  
+ //triangle (bottrix1, bottriy1, bottrix2, 100, bottrix3, 100); //bottom triangle
 }
 
