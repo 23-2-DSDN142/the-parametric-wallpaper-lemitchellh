@@ -76,7 +76,7 @@ strokeWeight(strokelight);
   //line (100, 0, 0, 50);
   //line (100, 0, 200, 50);
   //line (100, 200, 0, 150);
-  //line (100, 200, 200, 150);
+  //line (100, 200, 200, 150); // I'm keeping this code because it's a possible aesthetic choice, it's not necessarily useless
 
   strokeWeight (strokewhite);
   
@@ -107,13 +107,13 @@ line (lightdestx, lightdesty, 200, 166); //pinkk
 stroke (purple); //purple
 line (lightdestx, lightdesty, 200, 200); //purple
   
-stroke(white);
+stroke(triangleblue);
   
 strokeWeight (stroketriangle);
   fill(fillb);
   triangle (lightdestx / 2, lightdesty * 1.5, lightdestx, lightdesty / 2, lightdestx * 1.5, lightdesty * 1.5); //center triangle
-  //triangle (100, 50, 100, 1, 1, 50);
-  //line (100, 1, 100, 200); //line straight down middle
+  //triangle (100, 50, 100, 1, 1, 50); // optional triangle
+  //line (100, 1, 100, 200); //line straight down middle optional aesthetic 
 
   }
 
